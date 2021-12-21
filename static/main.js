@@ -9,8 +9,8 @@ function getRandomColor() {
 }
 
 window.setInterval(function(){
-    $(".state").each(function(i, e){
-        $(e).css("fill", getRandomColor());
+    $(".state").each(function(index, state){
+        // applies the randomization to each individual state
+        $(state).css("fill", getRandomColor());
     })
-    //$(".state").css('fill', getRandomColor());
 }, 1000);
