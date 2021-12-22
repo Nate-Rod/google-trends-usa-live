@@ -8,9 +8,14 @@ function getRandomColor() {
   return color;
 }
 
+function getRandomGoogleColor(){
+  var colors = ['#008744', '#0057e7', '#d62d20', '#ffa700'];
+  return colors[Math.floor(Math.random()*colors.length)];
+}
+
 window.setInterval(function(){
     $(".state").each(function(index, state){
         // applies the randomization to each individual state
-        $(state).css("fill", getRandomColor());
+        $(state).css("fill", getRandomGoogleColor());
     })
 }, 1000);
